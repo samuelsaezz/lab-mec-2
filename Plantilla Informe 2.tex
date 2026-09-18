@@ -46,11 +46,11 @@
     \textbf{Estudiantes:} & Nombre Apellido \\
                           & Nombre Apellido \\
                           & Nombre Apellido \\
-                          & Nombre Apellido \\[0.2cm]
-    \textbf{Profesora:}   & Nombre Apellido \\
+                          & Samuel Saez \\[0.2cm]
+    \textbf{Profesora:}   & Constanza Rivas \\
     \textbf{Ayudantes:}    & Nombre Apellido \\
                            & Nombre Apellido\\[0.2cm]
-    \textbf{Fecha de entrega:} & DD de mes de AAAA
+    \textbf{Fecha de entrega:} & 21 de septiembre de 2026
 \end{tabular}
 
 \vspace{0.4cm}
@@ -108,16 +108,16 @@ Describan cómo construyeron el gráfico de puntos con barras de error para las 
 \newpage
 \section{Configuración de Equilibrio 1}
 
-Describan brevemente la primera configuración de equilibrio, considerando la cantidad de masas suspendidas, la disposición de los dinamómetros y los ángulos seleccionados.
+En la primera configuración se utilizó una única masa suspendida, $m = (50{,}81 \pm 0{,}01)\,\mathrm{g}$, colgada de un hilo que pasa por una polea ubicada en el borde de la mesa de fuerzas sobre la dirección del eje $+x$. El peso de la masa, constituye la fuerza $\vec{F}_1$ ($\theta_1 = 0^\circ$). Las fuerzas $\vec{F}_2$ y $\vec{F}_3$ se aplicaron mediante dos dinamómetros fijados a $120^\circ$ y $240^\circ$ respecto al eje $+x$ (medidos en sentido antihorario), de modo que las tres fuerzas quedaran separadas simétricamente por $120^\circ$. La incertidumbre angular de la mesa se estimó en $\delta\theta = 2{,}5^\circ$ y la de los dinamómetros en $\delta F = 0{,}01\,\mathrm{N}$.
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Fuerza} & \textbf{Módulo ($F \pm \delta F$)} & \textbf{Ángulo ($\theta \pm \delta \theta$)} \\ \hline
-$F_1$ & & \\ \hline
-$F_2$ & & \\ \hline
-$F_3$ & & \\ \hline
+$F_1$ & $(0{,}498 \pm 0{,}001)\,\mathrm{N}$ & $(0{,}0 \pm 2{,}5)^\circ$ \\ \hline
+$F_2$ & $(0{,}420 \pm 0{,}01)\,\mathrm{N}$ & $(120{,}0 \pm 2{,}5)^\circ$ \\ \hline
+$F_3$ & $(0{,}470 \pm 0{,}01)\,\mathrm{N}$ & $(240{,}0 \pm 2{,}5)^\circ$ \\ \hline
 \end{tabular}
 \caption{Medición directa e indirecta de módulos y ángulos para la Configuración 1.}
 \label{tab:config1-mediciones}
@@ -127,17 +127,17 @@ Los datos recolectados de esta configuración fueron registrados en la Tabla \re
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.4\textwidth]{config1-vectores.png}
+    \includegraphics[width=0.4\textwidth]{config1-vectoress.png}
     \caption{Representación en el sistema de referencia de los vectores $\vec{F}_1$, $\vec{F}_2$ y $\vec{F}_3$ (Configuración 1).}
     \label{fig:config1-vectores}
 \end{figure}
 
 El módulo de $\vec{F}_1$ corresponde al peso de la masa, calculado como $F_1 = mg$. Para obtener $\delta F_1$, se realizó propagación de error.
 \begin{equation*}
-F_1 = mg = \dots
+F_1 = mg = (0{,}05081\,\mathrm{kg})(9{,}81\,\mathrm{m/s^2}) = 0{,}498\,\mathrm{N} \dots
 \end{equation*}
 \begin{equation*}
-\delta F_1 = \sqrt{\left(\frac{\partial F}{\partial m} \Delta m \right)^2 + \left(\frac{\partial F}{\partial g} \Delta g \right)^2} = \dots
+\delta F_1 = \sqrt{\left(\frac{\partial F}{\partial m} \Delta m \right)^2 + \left(\frac{\partial F}{\partial g} \Delta g \right)^2} = \sqrt{(9{,}81 \times 0{,}00001)^2 + (0{,}05081 \times 0{,}01)^2}\;\mathrm{N} \approx 0{,}001\,\mathrm{N} \dots
 \end{equation*}
 
 \subsection{Suma gráfica}
@@ -151,7 +151,8 @@ La suma gráfica de los vectores se puede ver en la Fig. \ref{fig:config1-poligo
     \label{fig:config1-poligono}
 \end{figure}
 
-Comenten cualitativamente si el polígono se cierra correctamente o si existe alguna discrepancia gráfica visible.
+Al trazar los vectores a escala uno a continuación del otro, el polígono no se cierra de forma exacta: entre el extremo de $\vec{F}_3$ y el origen de $\vec{F}_1$ queda una pequeña abertura, del orden de $0{,}07\,\mathrm{N}$ en la escala utilizada (aproximadamente un $14\,\%$ del módulo de $\vec{F}_1$). Esta discrepancia es coherente con que, para tres fuerzas separadas por $120^\circ$, el cierre exacto requiere módulos iguales, mientras que experimentalmente se obtuvo $F_1 > F_3 > F_2$.
+%Comenten cualitativamente si el polígono se cierra correctamente o si existe alguna discrepancia gráfica visible.
 
 \subsection{Suma analítica}
 
@@ -162,9 +163,9 @@ Los vectores de la Configuración 1 separados en sus componentes están registra
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Fuerza} & $F_x \pm \Delta F_x\,\mathrm{(N)}$ & $F_y \pm \Delta F_y\,\mathrm{(N)}$ \\ \hline
-$F_1$ & & \\ \hline
-$F_2$ & & \\ \hline
-$F_3$ & & \\ \hline
+$F_1$ & $0{,}498 \pm 0{,}001$ & $0{,}00 \pm 0{,}02$ \\ \hline
+$F_2$ & $-0{,}210 \pm 0{,}016$ & $0{,}364 \pm 0{,}009$ \\ \hline
+$F_3$ & $-0{,}235 \pm 0{,}018$ & $-0{,}407 \pm 0{,}010$ \\ \hline
 \end{tabular}
 \caption{Componentes cartesianas e incertidumbres absolutas para la Configuración 1.}
 \label{tab:config1-componentes}
@@ -173,7 +174,7 @@ $F_3$ & & \\ \hline
 Sumando estas componentes, el vector resultante es:
 
 \begin{equation*}
-\vec{R}_{\mathrm{exp, 1}} = (R_x \pm \Delta R_x)\,\uveci + (R_y \pm \Delta R_y)\,\uvecj = (\dots \pm \dots)\,\uveci + (\dots \pm \dots)\,\uvecj\,\mathrm{N}
+\vec{R}_{\mathrm{exp, 1}} = (R_x \pm \Delta R_x)\,\uveci + (R_y \pm \Delta R_y)\,\uvecj = (0{,}053 \pm 0{,}024)\,\uveci + (-0{,}043 \pm 0{,}026)\,\uvecj\,\mathrm{N}
 \end{equation*}
 
 \subsection{Comparación de los resultados}
@@ -187,7 +188,8 @@ La Fig. \ref{fig:grafico-error-1} muestra la comparación gráfica entre la pred
     \label{fig:grafico-error-1}
 \end{figure}
 
-Describan y analicen el gráfico obtenido. Indiquen si las barras de error de las componentes $R_x$ y $R_y$ cruzan la línea de referencia $y = 0\,\mathrm{N}$ y qué concluyen a partir de dicho cruce sobre la compatibilidad experimental con la condición de equilibrio traslacional.
+En la Fig. \ref{fig:grafico-error-1} se observa que ambas componentes de la resultante experimental se apartan de la referencia teórica: $R_x$ queda por encima de $y = 0\,\mathrm{N}$ y $R_y$ por debajo. En ninguno de los dos casos la barra de error cruza la línea de referencia: el intervalo de $R_x$ abarca de $0{,}029$ a $0{,}077\,\mathrm{N}$ y el de $R_y$ de $-0{,}069$ a $-0{,}017\,\mathrm{N}$. Por lo tanto, dentro de la incertidumbre estimada, el resultado experimental no es compatible con la condición de equilibrio traslacional $\sum \vec{F} = \vec{0}$; solo al ampliar el intervalo a $2\,\Delta R$ la componente $R_y$ pasa a ser compatible con cero, mientras que $R_x$ sigue quedando fuera por un margen pequeño. La discrepancia, de magnitud $|\vec{R}| \approx 0{,}07\,\mathrm{N}$, sugiere la presencia de fuentes de error sistemático no incluidas en la propagación: fricción en la polea que transmite $\vec{F}_1$ (lo que hace que la tensión efectiva sobre el anillo sea menor que $mg$), fricción entre el anillo central y el pivote de la mesa, y posibles desviaciones de cero o de calibración en los dinamómetros. El signo de $R_x > 0$ es coherente con esta interpretación, ya que indica que los dinamómetros registraron fuerzas menores a las necesarias para equilibrar el valor nominal de $\vec{F}_1$.
+%Describan y analicen el gráfico obtenido. Indiquen si las barras de error de las componentes $R_x$ y $R_y$ cruzan la línea de referencia $y = 0\,\mathrm{N}$ y qué concluyen a partir de dicho cruce sobre la compatibilidad experimental con la condición de equilibrio traslacional.
 
 \newpage
 
