@@ -62,13 +62,12 @@
 
 \subsection{Parte 1 - Mediciones experimentales y suma gráfica de vectores} \label{Procedimiento-Parte-1}
 
-Para la realización de las mediciones de fuerzas y ángulos se utilizó una tabla de fuerzas, sobre la cual se construyeron las tres configuraciones de equilibrio y se representaron gráficamente las fuerzas involucradas. El procedimiento seguido fue el siguiente:
-%Describan el procedimiento general utilizado para la realización de la medición de fuerzas y ángulos, la construcción de las configuraciones de equilibrio en la tabla de fuerzas y la representación gráfica de las fuerzas:
+Describan el procedimiento general utilizado para la realización de la medición de fuerzas y ángulos, la construcción de las configuraciones de equilibrio en la tabla de fuerzas y la representación gráfica de las fuerzas:
 
 \begin{enumerate}[label=\alph*)]
-\item Se definió el sistema de referencia tomando como origen del ángulo ($\theta = 0^\circ$) la dirección de la polea sobre la que actúa la fuerza peso $\vec{F}_1$, midiendo todos los ángulos en sentido antihorario. Así, $\vec{F}_1$ quedó sobre el eje $+x$ y los dinamómetros que aplican $\vec{F}_2$ y $\vec{F}_3$ se ubicaron según su ángulo respecto a dicho eje.
-\item Las masas suspendidas se midierom con balanza digital de resolución $0{,}01$ g. Los ángulos se leyeron directamente en la escala graduada de la mesa de fuerzas, cuya división mínima es de $5^\circ$; como incertidumbre se adoptó la mitad de dicha división, $\delta\theta = 2{,}5^\circ$. Los módulos de $\vec{F}_2$ y $\vec{F}_3$ se midieron con dinamómetros, con incertidumbre $\delta F = {[0,01]}\,\mathrm{N}$.
-\item El módulo de $\vec{F}_1$ no se midió de forma directa, sino que se obtuvo a partir de la masa o masas suspendidas mediante la relación $F_1 = mg$, con $g = (9{,}81 \pm 0{,}01)\,\mathrm{m/s^2}$. Su incertidumbre $\delta F_1$ se determinó por propagación de error
+\item cómo definieron el sistema de referencia para los ángulos;
+\item cómo realizaron las mediciones directas de las masas y los ángulos, con la resolución de los instrumentos;
+\item cómo realizaron las mediciones indirectas de las fuerzas $\vec{F}_1$;
 \item el procedimiento paso a paso para ajustar las tres configuraciones de equilibrio usando las cuerdas, poleas, resorte y dinamómetros;
 \item cómo construyeron la representación gráfica vectorial de los sistemas y el método del polígono (ya sea en papel milimetrado, software de edición o Python).
 \end{enumerate}
@@ -194,33 +193,27 @@ En la Fig. \ref{fig:grafico-error-1} se observa que ambas componentes de la resu
 
 \newpage
 
+
+\subsection{Suma gráfica de los vectores de la Configuración 2}
+
 \section{Configuración de Equilibrio 2}
 
-Describan la segunda configuración de equilibrio utilizada, considerando la cantidad de masas suspendidas, la disposición de los dinamómetros y los ángulos seleccionados.
+En la segunda configuración se incrementó la masa suspendida a $m_2$, obteniéndose un peso $\vec{F}_1 = (0{,}995 \pm 0{,}001)\,\mathrm{N}$ posicionado a $0{,}00^\circ$. Las fuerzas $\vec{F}_2$ y $\vec{F}_3$ se registraron mediante dinamómetros a ángulos de $150{,}0^\circ$ y $210{,}0^\circ$ respectivamente. La incertidumbre angular fue de $\delta\theta = 2{,}50^\circ$ y la de los dinamómetros de $\delta F = 0{,}01\,\mathrm{N}$.
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Fuerza} & \textbf{Módulo ($F \pm \delta F$)} & \textbf{Ángulo ($\theta \pm \delta \theta$)} \\ \hline
-$F_1$ & & \\ \hline
-$F_2$ & & \\ \hline
-$F_3$ & & \\ \hline
+$F_1$ & $(0{,}995 \pm 0{,}001)\,\mathrm{N}$ & $(0{,}00 \pm 2{,}50)^\circ$ \\ \hline
+$F_2$ & $(0{,}550 \pm 0{,}010)\,\mathrm{N}$ & $(150{,}00 \pm 2{,}50)^\circ$ \\ \hline
+$F_3$ & $(0{,}560 \pm 0{,}010)\,\mathrm{N}$ & $(210{,}00 \pm 2{,}50)^\circ$ \\ \hline
 \end{tabular}
 \caption{Medición directa e indirecta de módulos y ángulos para la Configuración 2.}
 \label{tab:config2-mediciones}
 \end{table}
 
-Los datos recolectados de esta configuración fueron registrados en la Tabla \ref{tab:config2-mediciones}. El módulo de $\vec{F}_1$ corresponde al peso de la masa, calculado como $F_1 = mg$. Para obtener $\delta F_1$, se realizó propagación de error.
-
-\begin{equation*}
-F_1 = mg = \dots
-\end{equation*}
-\begin{equation*}
-\delta F_1 = \sqrt{\left(\frac{\partial F}{\partial m} \Delta m \right)^2 + \left(\frac{\partial F}{\partial g} \Delta g \right)^2} = \dots
-\end{equation*}
-
-La representación gráfica de los vectores de esta configuración se puede ver en la Fig. \ref{fig:config2-vectores}.
+Los datos recolectados de esta configuración fueron registrados en la Tabla \ref{tab:config2-mediciones}. La representación gráfica de los vectores de esta configuración se puede ver en la Fig. \ref{fig:config2-vectores}.
 
 \begin{figure}[h!]
     \centering
@@ -240,7 +233,7 @@ La suma gráfica de los vectores se puede ver en la Fig. \ref{fig:config2-poligo
     \label{fig:config2-poligono}
 \end{figure}
 
-Comenten cualitativamente si el polígono se cierra correctamente o si existe alguna discrepancia gráfica visible.
+Al construir el polígono vectorial a escala, se observa un leve desfase entre el origen del primer vector y el extremo del último, alcanzando una fuerza no equilibrada visible en el gráfico.
 
 \subsection{Suma analítica}
 
@@ -251,9 +244,9 @@ Los vectores de la Configuración 2 separados en sus componentes están registra
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Fuerza} & $F_x \pm \Delta F_x\,\mathrm{(N)}$ & $F_y \pm \Delta F_y\,\mathrm{(N)}$ \\ \hline
-$F_1$ & & \\ \hline
-$F_2$ & & \\ \hline
-$F_3$ & & \\ \hline
+$F_1$ & $0{,}995 \pm 0{,}001$ & $0{,}000 \pm 0{,}043$ \\ \hline
+$F_2$ & $-0{,}476 \pm 0{,}022$ & $0{,}275 \pm 0{,}021$ \\ \hline
+$F_3$ & $-0{,}485 \pm 0{,}022$ & $-0{,}280 \pm 0{,}021$ \\ \hline
 \end{tabular}
 \caption{Componentes cartesianas e incertidumbres absolutas para la Configuración 2.}
 \label{tab:config2-componentes}
@@ -262,7 +255,7 @@ $F_3$ & & \\ \hline
 Sumando estas componentes, el vector resultante es:
 
 \begin{equation*}
-\vec{R}_{\mathrm{exp, 2}} = (R_x \pm \Delta R_x)\,\uveci + (R_y \pm \Delta R_y)\,\uvecj = (\dots \pm \dots)\,\uveci + (\dots \pm \dots)\,\uvecj\,\mathrm{N}
+\vec{R}_{\mathrm{exp, 2}} = (R_x \pm \Delta R_x)\,\uveci + (R_y \pm \Delta R_y)\,\uvecj = (0{,}034 \pm 0{,}031)\,\uveci + (-0{,}005 \pm 0{,}052)\,\uvecj\,\mathrm{N}
 \end{equation*}
 
 \subsection{Comparación de los resultados}
@@ -276,7 +269,7 @@ La Fig. \ref{fig:grafico-error-2} muestra la comparación gráfica entre la pred
     \label{fig:grafico-error-2}
 \end{figure}
 
-Describan y analicen el gráfico obtenido. Indiquen si las barras de error de las componentes $R_x$ y $R_y$ cruzan la línea de referencia $y = 0\,\mathrm{N}$ y qué concluyen a partir de dicho cruce sobre la compatibilidad experimental con la condición de equilibrio traslacional.
+En la Fig. \ref{fig:grafico-error-2} se analiza el comportamiento de las componentes del vector resultante. La componente $R_y = (-0{,}005 \pm 0{,}052)\,\mathrm{N}$ cruza claramente la línea de referencia $y = 0\,\mathrm{N}$, por lo que es estadísticamente compatible con el equilibrio traslacional en el eje vertical. Para la componente $R_x = (0{,}034 \pm 0{,}031)\,\mathrm{N}$, la barra de error abarca desde $0{,}003\,\mathrm{N}$ hasta $0{,}065\,\mathrm{N}$, rozando la línea de referencia; con un intervalo de $2\Delta R_x$, esta componente también cruza $y = 0\,\mathrm{N}$. Por lo tanto, el sistema se aproxima satisfactoriamente a la condición de equilibrio, siendo las desviaciones menores atribuibles al roce mecánico en la polea y la sensibilidad de los dinamómetros.
 
 \newpage
 \section{Configuración de Equilibrio 3}
