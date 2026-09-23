@@ -48,9 +48,9 @@
                           & Nombre Apellido \\
                           & Samuel Saez \\[0.2cm]
     \textbf{Profesora:}   & Constanza Rivas \\
-    \textbf{Ayudantes:}    & Nombre Apellido \\
-                           & Nombre Apellido\\[0.2cm]
-    \textbf{Fecha de entrega:} & 21 de septiembre de 2026
+    \textbf{Ayudantes:}    & Lixin Lai \\
+                           & Annelies Fullgraff \\[0.2cm]
+    \textbf{Fecha de entrega:} & 23 de septiembre de 2026
 \end{tabular}
 
 \vspace{0.4cm}
@@ -274,16 +274,17 @@ En la Fig. \ref{fig:grafico-error-2} se analiza el comportamiento de las compone
 \newpage
 \section{Configuración de Equilibrio 3}
 
-Describan la tercera configuración de equilibrio utilizada, considerando la cantidad de masas suspendidas, la disposición de los dinamómetros y los ángulos seleccionados.
+En la tercera configuración se utilizó tres masas suspendidas en la pole con dirección del eje $+x$. El peso de la masa, constituye la fuerza $\vec{F}_1$ ($\theta_1 = 0^\circ$). Las fuerzas $\vec{F}_2$ y $\vec{F}_3$ se aplicaron mediante dos dinamómetros fijados a $135^\circ$ y $300^\circ$ respecto al eje $+x$ (medidos en sentido antihorario). A diferencia de la Configuración 1, en este caso las fuerzas no están separadas simétricamente, y los módulos de $\vec{F}_2$ y $\vec{F}_3$ son considerablemente mayores que el de $\vec{F}_1$. La incertidumbre angular de la mesa se estimó en $\delta\theta = 2{,}5^\circ$ y la de los dinamómetros en $\delta F = 0{,}01\,\mathrm{N}$.
+%Describan la tercera configuración de equilibrio utilizada, considerando la cantidad de masas suspendidas, la disposición de los dinamómetros y los ángulos seleccionados.
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Fuerza} & \textbf{Módulo ($F \pm \delta F$)} & \textbf{Ángulo ($\theta \pm \delta \theta$)} \\ \hline
-$F_1$ & & \\ \hline
-$F_2$ & & \\ \hline
-$F_3$ & & \\ \hline
+$F_1$ & $(1{,}495 \pm 0{,}010)\,\mathrm{N}$ & $(0{,}0 \pm 2{,}5)^\circ$ & \\ \hline
+$F_2$ & $(4{,}59 \pm 0{,}01)\,\mathrm{N}$ & $(135{,}0 \pm 2{,}5)^\circ$ & \\ \hline
+$F_3$ & $(3{,}69 \pm 0{,}01)\,\mathrm{N}$ & $(300{,}0 \pm 2{,}5)^\circ$ & \\ \hline
 \end{tabular}
 \caption{Medición directa e indirecta de módulos y ángulos para la Configuración 3.}
 \label{tab:config3-mediciones}
@@ -291,7 +292,7 @@ $F_3$ & & \\ \hline
 
 Los datos recolectados de esta configuración fueron registrados en la Tabla \ref{tab:config3-mediciones}. El módulo de $\vec{F}_1$ corresponde al peso de la masa, calculado como $F_1 = mg$. Para obtener $\delta F_1$, se realizó propagación de error.
 \begin{equation*}
-F_1 = mg = \dots
+F_1 = mg = ({0{,}1524}\,\mathrm{kg})(9{,}81\,\mathrm{m/s^2}) = 1{,}495\,\mathrm{N}\dots
 \end{equation*}
 \begin{equation*}
 \delta F_1 = \sqrt{\left(\frac{\partial F}{\partial m} \Delta m \right)^2 + \left(\frac{\partial F}{\partial g} \Delta g \right)^2} = \dots
@@ -317,7 +318,8 @@ La suma gráfica de los vectores se puede ver en la Fig. \ref{fig:config3-poligo
     \label{fig:config3-poligono}
 \end{figure}
 
-Comenten cualitativamente si el polígono se cierra correctamente o si existe alguna discrepancia gráfica visible.
+Al trazar los vectores, el polígono se cierra casi por completo: el extremo de $\vec{F}_3$ queda muy próximo al origen de $\vec{F}_1$, con una abertura aproximadamente de $0{,}11\,\mathrm{N}$. Ya que los módulos de las fuerzas, son del orden de varios newtons, esta discrepancia es pequeña (menor al $3\,\%$ del módulo de $\vec{F}_2$), por lo que gráficamente el sistema se muestra consistente con el equilibrio.
+%Comenten cualitativamente si el polígono se cierra correctamente o si existe alguna discrepancia gráfica visible.
 
 \subsection{Suma analítica de los vectores de la Configuración 3}
 
@@ -328,9 +330,9 @@ Los vectores de la Configuración 3 separados en sus componentes están registra
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Fuerza} & $F_x \pm \Delta F_x\,\mathrm{(N)}$ & $F_y \pm \Delta F_y\,\mathrm{(N)}$ \\ \hline
-$F_1$ & & \\ \hline
-$F_2$ & & \\ \hline
-$F_3$ & & \\ \hline
+$F_1$ & $1{,}50 \pm 0{,}01$ & $0{,}00 \pm 0{,}07$ & \\ \hline
+$F_2$ & $-3{,}25 \pm 0{,}14$ & $3{,}25 \pm 0{,}14$ & \\ \hline
+$F_3$ & $1{,}85 \pm 0{,}14$ & $-3{,}20 \pm 0{,}08$ & \\ \hline
 \end{tabular}
 \caption{Componentes cartesianas e incertidumbres absolutas para la Configuración 3.}
 \label{tab:config3-componentes}
@@ -339,7 +341,7 @@ $F_3$ & & \\ \hline
 Sumando estas componentes, el vector resultante es:
 
 \begin{equation*}
-\vec{R}_{\mathrm{exp, 3}} = (R_x \pm \Delta R_x)\,\uveci + (R_y \pm \Delta R_y)\,\uvecj = (\dots \pm \dots)\,\uveci + (\dots \pm \dots)\,\uvecj\,\mathrm{N}
+\vec{R}_{\mathrm{exp, 3}} = (R_x \pm \Delta R_x)\,\uveci + (R_y \pm \Delta R_y)\,\uvecj = (0{,}09 \pm 0{,}20)\,\uveci + (0{,}05 \pm 0{,}18)\,\uvecj\,\mathrm{N}
 \end{equation*}
 
 \subsection{Comparación de los resultados}
@@ -353,7 +355,8 @@ La Fig. \ref{fig:grafico-error-3} muestra la comparación gráfica entre la pred
     \label{fig:grafico-error-3}
 \end{figure}
 
-Describan y analicen el gráfico obtenido. Indiquen si las barras de error de las componentes $R_x$ y $R_y$ cruzan la línea de referencia $y = 0\,\mathrm{N}$ y qué concluyen a partir de dicho cruce sobre la compatibilidad experimental con la condición de equilibrio traslacional.
+En la Fig. \ref{fig:grafico-error-3} se observa que ambas componentes de la resultante experimental toman valores positivos pequeños, $R_x = 0{,}09\,\mathrm{N}$ y $R_y = 0{,}05\,\mathrm{N}$. En ambos casos la barra de error cruza la línea de referencia $y = 0\,\mathrm{N}$: el intervalo de $R_x$ abarca de $-0{,}11$ a $0{,}29\,\mathrm{N}$ y el de $R_y$ de $-0{,}13$ a $0{,}23\,\mathrm{N}$. Cabe notar que las incertidumbres de esta configuración son mayores que en la Configuración 1, debido principalmente a que la incertidumbre angular ($\delta\theta = 2{,}5^\circ$) se multiplica por módulos de fuerza más grandes, lo que amplía las barras de error de las componentes de $\vec{F}_2$ y $\vec{F}_3$.
+%Describan y analicen el gráfico obtenido. Indiquen si las barras de error de las componentes $R_x$ y $R_y$ cruzan la línea de referencia $y = 0\,\mathrm{N}$ y qué concluyen a partir de dicho cruce sobre la compatibilidad experimental con la condición de equilibrio traslacional.
 
 \newpage
 \section{Análisis y conclusiones}
