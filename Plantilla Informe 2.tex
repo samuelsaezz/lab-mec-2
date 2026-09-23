@@ -65,16 +65,17 @@
 Describan el procedimiento general utilizado para la realización de la medición de fuerzas y ángulos, la construcción de las configuraciones de equilibrio en la tabla de fuerzas y la representación gráfica de las fuerzas:
 
 \begin{enumerate}[label=\alph*)]
-\item cómo definieron el sistema de referencia para los ángulos;
-\item cómo realizaron las mediciones directas de las masas y los ángulos, con la resolución de los instrumentos;
-\item cómo realizaron las mediciones indirectas de las fuerzas $\vec{F}_1$;
-\item el procedimiento paso a paso para ajustar las tres configuraciones de equilibrio usando las cuerdas, poleas, resorte y dinamómetros;
-\item cómo construyeron la representación gráfica vectorial de los sistemas y el método del polígono (ya sea en papel milimetrado, software de edición o Python).
+\item Para el sistema de referencia se usó la escala angular impresa en la tabla de fuerzas. El ángulo $0^\circ$ se fijó en la dirección de la polea donde colgaban las masas, por lo que la fuerza $\vec{F}_1$ quedó siempre sobre el eje $+x$. Los demás ángulos se midieron en sentido antihorario a partir de ese eje;
+\item Las masas se midieron con una balanza de resolución $0{,}01\,\mathrm{g}$. Los ángulos se leyeron directamente en la mesa, que está graduada cada $5^\circ$, así que se tomó como incertidumbre la mitad de esa división, $\delta\theta = 2{,}5^\circ$. Las fuerzas $\vec{F}_2$ y $\vec{F}_3$ se midieron con dinamómetros, considerando una incertidumbre de $\delta F = 0{,}01\,\mathrm{N}$;
+\item La fuerza $\vec{F}_1$ no se midió directamente, sino que se calculó como el peso de las masas colgadas, $F_1 = mg$, usando $g = (9{,}81 \pm 0{,}01)\,\mathrm{m/s^2}$. Su incertidumbre se obtuvo por propagación de error a partir de $\Delta m$ y $\Delta g$;
+\item Para armar cada configuración, primero se colgaron las masas en la polea del eje $+x$. Luego se engancharon los dos dinamómetros al centro de equilibrio mediante cuerdas y se ubicaron en los ángulos elegidos. Después se fueron ajustando las posiciones y tensiones hasta que el sistema quedara centrado en la tabla, momento en que se consideró que el sistema estaba en equilibrio y se anotaron las lecturas de los dinamómetros y los ángulos. En la Configuración 1 se usó una masa y los dinamómetros a $120^\circ$ y $240^\circ$; en la Configuración 2 se aumentó a 2 masas y se ubicaron a $150^\circ$ y $210^\circ$; y en la Configuración 3 se usaron tres masas, con los dinamómetros a $135^\circ$ y $300^\circ$;
+\item Los vectores de cada configuración se graficaron en Python a partir de su módulo y ángulo, dibujándolos a escala desde el origen. Para la suma gráfica se usó el método del polígono, poniendo cada vector a continuación del anterior; si el sistema estuviera en equilibrio perfecto, el último vector terminaría justo en el origen, y la separación que queda corresponde a la resultante $\vec{R}_{\mathrm{exp}}$.
 \end{enumerate}
 
 \subsection{Parte 2 - Tratamiento analítico y propagación de error} \label{Procedimiento-Parte-2}
 
-Describan el desarrollo analítico utilizado para el cálculo de las componentes cartesianas de las fuerzas y sus respectivas incertidumbres absolutas.
+Para la suma analítica, cada fuerza se separó en sus componentes cartesianas usando su módulo y ángulo. Como tanto el módulo como el ángulo tienen incertidumbre, el error de cada componente se calculó por propagación, considerando ambos aportes y pasando $\delta\theta$ a radianes.
+%Describan el desarrollo analítico utilizado para el cálculo de las componentes cartesianas de las fuerzas y sus respectivas incertidumbres absolutas.
 
 Para las componentes $x$:
 \begin{align*}
@@ -88,7 +89,8 @@ Para las componentes $y$:
     \Delta F_y &= \sqrt{\left(\frac{\partial F_y}{\partial F}\delta F\right)^2 + \left(\frac{\partial F_y}{\partial \theta}\delta \theta_{\text{rad}}\right)^2} = \sqrt{\left(\sin\theta \, \Delta F\right)^2 + \left(F\cos\theta \, \left(\Delta \theta \frac{\pi}{180^\circ}\right)\right)^2}
 \end{align*}
 
-Asimismo, detallen la forma analítica de calcular las componentes del vector resultante $\vec{R}_{\text{exp}}$ y sus incertidumbres $\Delta R_x$ y $\Delta R_y$:
+%Asimismo, detallen la forma analítica de calcular las componentes del vector resultante $\vec{R}_{\text{exp}}$ y sus incertidumbres $\Delta R_x$ y $\Delta R_y$:
+Luego, las componentes de la resultante $\vec{R}_{\text{exp}}$ se obtuvieron sumando las componentes de las tres fuerzas, y sus incertidumbres sumando en cuadratura los errores de cada una:
 \begin{align*}
 R_x &= F_{1x} + F_{2x} + F_{3x}, \qquad \Delta R_x = \sqrt{\Delta F_{1x}^2 + \Delta F_{2x}^2 + \Delta F_{3x}^2} \\
 R_y &= F_{1y} + F_{2y} + F_{3y}, \qquad \Delta R_y = \sqrt{\Delta F_{1y}^2 + \Delta F_{2y}^2 + \Delta F_{3y}^2}
@@ -96,13 +98,13 @@ R_y &= F_{1y} + F_{2y} + F_{3y}, \qquad \Delta R_y = \sqrt{\Delta F_{1y}^2 + \De
 
 \subsection{Parte 3 - Comparación con la predicción teórica y análisis gráfico} \label{Procedimiento-Parte-3}
 
-Describan cómo construyeron el gráfico de puntos con barras de error para las componentes de los vectores resultantes y cómo lo interpretaron:
+Para comparar con lo esperado teóricamente, se hizo en Python un gráfico de puntos con barras de error para cada configuración:
 
 \begin{enumerate}[label=\alph*)]
-\item cómo definieron las variables de los ejes y sus escalas;
-\item cómo incorporaron las barras de error en el gráfico;
-\item cómo trazaron la línea de referencia teórica ($y = 0\,\mathrm{N}$) y qué significa;
-\item el criterio utilizado para determinar si el resultado es compatible con el equilibrio.
+\item En el eje horizontal se pusieron las componentes $R_x$ y $R_y$, y en el eje vertical su valor en newtons. La escala se ajustó en cada configuración para que se vieran bien los puntos y sus barras de error;
+\item Cada punto se graficó con una barra de error vertical igual a su incertidumbre, $\pm\Delta R_x$ o $\pm\Delta R_y$, calculada como se explicó en la Sección \ref{Procedimiento-Parte-2};
+\item Se trazó una línea horizontal en $y = 0\,\mathrm{N}$, que representa la condición de equilibrio $\sum \vec{F} = \vec{0}$, es decir, lo que se esperaría si las tres fuerzas se anularan completamente;
+\item Para decidir si el resultado era compatible con el equilibrio se revisó si la barra de error de cada componente cruzaba la línea $y = 0\,\mathrm{N}$. Si la cruza, la diferencia con cero se explica por la incertidumbre de las mediciones; si no, indica una desviación probablemente causada por errores sistemáticos, como el roce en la polea o error en alguna medición.
 \end{enumerate}
 
 \newpage
